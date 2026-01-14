@@ -1,0 +1,201 @@
+:root {
+  --bgA: #0b1020;
+  --bgB: #101a3a;
+  --card: rgba(255, 255, 255, 0.08);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.55);
+  --accent1: #7aa7ff;
+  --accent2: #b58bff;
+  --field: rgba(10, 14, 28, 0.55);
+}
+
+/* Light Theme Fixes */
+.light-theme {
+  --bgA: #ffffff;
+  /* Mukammal white background */
+  --bgB: #f8f9fa;
+  --card: #ffffff;
+  /* Card background white */
+  --stroke: #e0e0e0;
+  /* Borders thode saaf */
+  --text: #1a1a1b;
+  /* Text dark black/grey */
+  --muted: #5f6368;
+  --accent1: #3578e5;
+  /* Blue thoda dark for readability */
+  --accent2: #673ab7;
+  --field: #f1f3f4;
+  /* Input fields light grey */
+}
+
+body {
+  margin: 0;
+  background: var(--bgA);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  /* Yeh line background fix karegi */
+  background: var(--bgA);
+}
+
+.shell {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 20px;
+}
+
+.hero,
+.side {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: 25px;
+  /* Light theme mein halka shadow taaki cards alag dikhein */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-main {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.hc-badge {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: #fff;
+}
+
+.steps-visualizer {
+  /* Light theme mein iska background thoda dark rakha hai taaki circles nazar aayein */
+  background: var(--field);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.step-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* Dark mode fallback check */
+  background: #e0e0e0;
+  border: 1px solid var(--stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  z-index: 1;
+  color: #000;
+}
+
+.circle.active {
+  background: var(--accent1);
+  color: #fff;
+  box-shadow: 0 0 10px var(--accent1);
+}
+
+.box-area {
+  background: var(--field);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  color: var(--text);
+  outline: none;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.btn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke);
+  background: var(--field);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background: var(--accent1);
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 0;
+  margin-top: 10px;
+}
+
+.workings-box {
+  margin-top: 25px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.work-item {
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--stroke);
+  padding-bottom: 8px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.api-badge {
+  font-size: 8px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.post {
+  background: #2e7d32;
+
+}
+
+.get {
+  background: #1565c0;
+}
+
+.history-item {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-item:hover {
+  background: var(--field);
+  border-color: var(--accent1);
+}
