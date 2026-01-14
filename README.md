@@ -1,16 +1,103 @@
-# React + Vite
+# Hybrid Cipher React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Hybrid Cipher / Decipher web application** built using **React (Vite)**.  
+This project is a React-based conversion of an existing HTML/CSS/JavaScript cipher system, while keeping the **original UI, CSS, and logic intact**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  Encrypt plain text using a hybrid cipher algorithm
+-  Decrypt cipher text back to plain text
+-  Toggle between Cipher / Decipher modes
+-  Fixed reversible cipher table
+-  Original UI & CSS preserved (no redesign)
+-  Built with React functional components
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** (Vite)
+- **JavaScript (ES6)**
+- **HTML5**
+- **CSS3**
+- **Git & GitHub**
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+
+hybrid-cipher-react/
+│
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── components/
+│   │   ├── Cipher.jsx
+│   │   ├── Decipher.jsx
+│   │   └── FixedTable.jsx
+│   │
+│   ├── utils/
+│   │   └── cipherLogic.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+````
+
+## Getting Started
+
+### Clone the Repository
+```bash
+git clone https://github.com/ahubfaisal/hybrid_cipher.git
+````
+
+### Navigate to Project Folder
+
+```bash
+cd hybrid-cipher-react
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the App
+
+```bash
+npm run dev
+```
+
+Open your browser at:
+
+```
+http://localhost:5173
+```
+
+##  How It Works
+
+* `App.jsx` controls the **Cipher / Decipher mode** using React state
+* `Cipher.jsx` handles encryption UI and logic
+* `Decipher.jsx` handles decryption UI and logic
+* `cipherLogic.js` contains the core hybrid cipher algorithm
+* Original CSS is reused to keep the UI exactly the same
+
+## Notes
+
+* This project focuses on **learning React conversion**, not redesign
+* No external UI libraries were used
+* Ideal for academic projects and demonstrations
+
+##  Author
+
+**Ahub Faisal**
+GitHub: (https://github.com/ahubfaisal)
+
+
